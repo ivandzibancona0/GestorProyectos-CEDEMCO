@@ -191,4 +191,6 @@ npm run check
 
 ## 📄 Licencia y Créditos
 
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](file:///c:/Users/ivand/Downloads/cedemco-uady-pm-master/LICENSE) para más detalles.
+
 Desarrollado para el **Centro de Emprendimiento y Desarrollo de Modelos de Negocio (CEDEMCO)** de la **Universidad Autónoma de Yucatán (UADY)**.

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Plataforma multiusuario para el seguimiento de proyectos de emprendimiento de CEDEMCO - UADY",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "node --watch src/server.js",
