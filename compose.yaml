@@ -1,0 +1,42 @@
+services:
+  database:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cedemco
+      POSTGRES_USER: cedemco
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cambiar-en-produccion}
+    volumes:
+      - cedemco_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cedemco -d cedemco"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks: [internal]
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://cedemco:${POSTGRES_PASSWORD:-cambiar-en-produccion}@database:5432/cedemco
+      DATABASE_SSL: "false"
+      APP_ORIGIN: ${APP_ORIGIN:-https://cedemco.example.edu.mx}
+      TRUST_PROXY: 1
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./public:/app/public:ro
+      - ./src:/app/src:ro
+    networks: [internal]
+
+volumes:
+  cedemco_data:
+networks:
+  internal:
+    driver: bridge

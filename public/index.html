@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#062b5c">
+  <meta name="description" content="Plataforma CEDEMCO - UADY para acompañamiento y seguimiento de proyectos de emprendimiento.">
+  <title>CEDEMCO - UADY</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/logo-cedemco.png">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=3.1">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-log-out" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+  </svg>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <main id="login-view" class="login-shell">
+    <section class="login-brand" aria-label="CEDEMCO UADY">
+      <div class="brand-content">
+        <span class="eyebrow">CENTRO DE DESARROLLO DE EMPRENDIMIENTO Y COMPETITIVIDAD</span>
+        <h1>Impulsamos ideas.<br><em>Acompañamos resultados.</em></h1>
+        <p>Una plataforma para transformar la planeación en avances medibles, desde la primera idea hasta la consolidación.</p>
+        <div class="brand-points"><span>Planea</span><span>Mide</span><span>Avanza</span></div>
+      </div>
+    </section>
+    <section class="login-panel">
+      <form id="login-form" class="login-card" autocomplete="on">
+        <img class="login-logo" src="/logo-cedemco.png" alt="CEDEMCO, Centro de Desarrollo de Emprendimiento y Competitividad, Campus CSEAH-UADY">
+        <div><span class="eyebrow navy">ACCESO A LA PLATAFORMA</span><h2>Bienvenido</h2><p class="muted">Ingresa tus datos para continuar.</p></div>
+        <label>Correo electrónico<input name="email" type="email" autocomplete="username" placeholder="nombre@correo.com" required></label>
+        <label>Contraseña<span class="password-wrap"><input name="password" type="password" autocomplete="current-password" placeholder="••••••••••••" required><button class="icon-button password-toggle" type="button" aria-label="Mostrar contraseña"><svg><use href="#i-eye"/></svg></button></span></label>
+        <div class="form-row"><label class="checkbox"><input type="checkbox" name="remember"> Recordarme</label><button id="forgot-link" class="text-button" type="button">¿Olvidaste tu contraseña?</button></div>
+        <button class="button primary wide" type="submit">Iniciar sesión <svg><use href="#i-arrow"/></svg></button>
+        <p class="login-help">¿Necesitas ayuda? Contacta al administrador de CEDEMCO.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="app-view" class="app-shell hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-brand"><img src="/logo-cedemco.png" alt="CEDEMCO"><button id="close-menu" class="icon-button mobile-only" aria-label="Cerrar menú"><svg><use href="#i-x"/></svg></button></div>
+      <nav id="main-nav" aria-label="Navegación principal">
+        <button data-view="dashboard" class="nav-item active"><svg><use href="#i-grid"/></svg><span>Resumen</span></button>
+        <button data-view="projects" class="nav-item"><svg><use href="#i-folder"/></svg><span>Proyectos</span></button>
+        <button data-view="entrepreneurs" class="nav-item"><svg><use href="#i-users"/></svg><span>Emprendedores</span></button>
+        <span class="nav-caption">HERRAMIENTAS</span>
+        <button data-view="calculator" class="nav-item"><svg><use href="#i-calc"/></svg><span>Punto de equilibrio</span></button>
+        <button data-view="planner" class="nav-item"><svg><use href="#i-target"/></svg><span>Planificador</span></button>
+        <button data-view="kanban" class="nav-item"><svg><use href="#i-board"/></svg><span>Seguimiento</span></button>
+        <button data-view="meetings" class="nav-item"><svg><use href="#i-calendar"/></svg><span>Agenda y notas</span></button>
+        <span class="nav-caption admin-only">ADMINISTRACIÓN</span>
+        <button data-view="admin" class="nav-item admin-only"><svg><use href="#i-shield"/></svg><span>Usuarios y reportes</span></button>
+      </nav>
+      <div class="sidebar-footer"><div class="avatar" id="sidebar-avatar">AM</div><div><strong id="sidebar-name">Ana Martínez</strong><small id="sidebar-role">Usuario estándar</small></div><button id="logout-button" class="icon-button" aria-label="Cerrar sesión"><svg><use href="#i-log-out"/></svg></button></div>
+    </aside>
+    <div id="menu-backdrop" class="menu-backdrop"></div>
+
+    <section class="workspace">
+      <header class="topbar">
+        <button id="open-menu" class="icon-button mobile-only" aria-label="Abrir menú"><svg><use href="#i-menu"/></svg></button>
+        <div class="topbar-search"><svg><use href="#i-search"/></svg><input id="global-search" type="search" placeholder="Buscar proyectos, emprendedores..." aria-label="Buscar"></div>
+        <button class="icon-button notification" aria-label="Notificaciones"><svg><use href="#i-bell"/></svg><span></span></button>
+        <div class="topbar-user"><div class="avatar" id="top-avatar">AM</div><div><strong id="top-name">Ana Martínez</strong><small id="top-role">Usuario estándar</small></div></div>
+      </header>
+
+      <div id="content" class="content">
+        <section id="view-dashboard" class="view active-view">
+          <div class="page-heading"><div><span class="eyebrow navy">PANORAMA GENERAL</span><h1>Buenos días, <span id="greeting-name">Ana</span></h1><p>Este es el avance de tus proyectos de emprendimiento.</p></div><button class="button primary" data-action="new-project"><svg><use href="#i-plus"/></svg> Nuevo proyecto</button></div>
+          <div class="metrics" id="metrics">
+            <article class="metric"><span class="metric-icon blue"><svg><use href="#i-folder"/></svg></span><div><small>Proyectos activos</small><strong>—</strong><span>Cargando información</span></div></article>
+            <article class="metric"><span class="metric-icon gold"><svg><use href="#i-chart"/></svg></span><div><small>Avance promedio</small><strong>—</strong><span>De todos los proyectos</span></div></article>
+            <article class="metric"><span class="metric-icon teal"><svg><use href="#i-clock"/></svg></span><div><small>Próximos vencimientos</small><strong>—</strong><span>En los siguientes 14 días</span></div></article>
+          </div>
+          <div class="dashboard-grid">
+            <article class="panel projects-panel"><div class="panel-head"><div><h2>Proyectos recientes</h2><p>Seguimiento de tus emprendimientos</p></div><button class="text-button" data-view-link="projects">Ver todos <svg><use href="#i-arrow"/></svg></button></div><div id="recent-projects" class="project-list skeleton-lines"></div></article>
+            <article class="panel meetings-panel"><div class="panel-head"><div><h2>Próximas reuniones</h2><p>Tu agenda de acompañamiento</p></div><button class="icon-button" data-action="new-meeting" aria-label="Agendar reunión"><svg><use href="#i-plus"/></svg></button></div><div id="upcoming-meetings" class="meeting-list skeleton-lines"></div></article>
+            <article class="panel activity-panel"><div class="panel-head"><div><h2>Actividad reciente</h2><p>Últimos movimientos registrados</p></div></div><div id="activity-list" class="activity-list skeleton-lines"></div></article>
+          </div>
+        </section>
+
+        <section id="view-projects" class="view"><div class="page-heading"><div><span class="eyebrow navy">PORTAFOLIO</span><h1>Proyectos</h1><p>Administra y consulta los emprendimientos acompañados.</p></div><button class="button primary" data-action="new-project"><svg><use href="#i-plus"/></svg> Nuevo proyecto</button></div><div class="toolbar"><div class="search-field"><svg><use href="#i-search"/></svg><input data-filter="projects" placeholder="Buscar por proyecto o emprendedor"></div><select id="project-status-filter" aria-label="Filtrar por estado"><option value="">Todos los estados</option><option value="active">Activo</option><option value="paused">Pausado</option><option value="completed">Completado</option></select></div><div id="projects-grid" class="cards-grid"></div></section>
+        <section id="view-entrepreneurs" class="view"><div class="page-heading"><div><span class="eyebrow navy">DIRECTORIO</span><h1>Emprendedores</h1><p>Información de contacto y proyectos vinculados.</p></div><button class="button primary" data-action="new-entrepreneur"><svg><use href="#i-plus"/></svg> Nuevo emprendedor</button></div><div class="toolbar"><div class="search-field"><svg><use href="#i-search"/></svg><input data-filter="entrepreneurs" placeholder="Buscar por nombre, correo o municipio"></div></div><div id="entrepreneurs-grid" class="cards-grid"></div></section>
+
+        <section id="view-calculator" class="view"><div class="page-heading"><div><span class="eyebrow navy">ANÁLISIS FINANCIERO</span><h1>Punto de equilibrio</h1><p>Calcula cuánto necesitas vender para cubrir todos tus costos.</p></div></div><div class="two-column"><form id="calculator-form" class="panel form-panel"><div class="panel-head"><div><h2>Datos del cálculo</h2><p>Agrega uno o varios productos.</p></div></div><div class="form-grid"><label>Proyecto<select name="projectId" id="calculator-project"><option value="">Cálculo sin guardar</option></select></label><label>Costos fijos mensuales ($)<input name="fixedCosts" inputmode="decimal" type="number" min="0" step="0.01" value="18500" required></label></div><div class="products-head"><h3>Productos</h3><button id="add-product" class="button secondary small" type="button"><svg><use href="#i-plus"/></svg> Agregar</button></div><div id="product-rows"></div><div class="calculator-actions"><button class="button primary" type="submit">Calcular punto de equilibrio</button><button id="reset-calculator" class="button secondary" type="button" title="Reiniciar datos y resultado">Limpiar</button></div></form><aside id="calculator-result" class="panel result-panel empty-result"><span class="result-icon"><svg><use href="#i-chart"/></svg></span><h2>Tu resultado aparecerá aquí</h2><p>Completa los datos para conocer la cantidad e ingreso de equilibrio y el margen de contribución.</p></aside></div></section>
+
+        <section id="view-planner" class="view"><div class="page-heading"><div><span class="eyebrow navy">RUTA DE TRABAJO</span><h1>Planificador SMART</h1><p>Convierte objetivos claros en un cronograma ejecutable.</p></div><button class="button primary" data-action="new-objective"><svg><use href="#i-plus"/></svg> Nuevo objetivo</button></div><div class="project-selector"><label>Proyecto activo<select id="planner-project"></select></label></div><div id="objectives-list" class="objective-list"></div><article class="panel timeline-panel"><div class="panel-head"><div><h2>Línea de tiempo de entregables</h2><p>Secuencia cronológica y avance de actividades</p></div></div><div id="planner-timeline" class="planner-timeline"></div></article></section>
+
+        <section id="view-kanban" class="view kanban-view"><div class="page-heading"><div><span class="eyebrow navy">SEGUIMIENTO EN TIEMPO REAL</span><h1>Tablero Kanban</h1><p>Arrastra las tarjetas para reflejar su avance.</p></div><button class="button primary" data-action="new-task"><svg><use href="#i-plus"/></svg> Nueva tarea</button></div><div class="project-selector"><label>Proyecto activo<select id="kanban-project"></select></label></div><div id="kanban-board" class="kanban-board"></div></section>
+
+        <section id="view-meetings" class="view"><div class="page-heading"><div><span class="eyebrow navy">ACOMPAÑAMIENTO</span><h1>Agenda y notas</h1><p>Programa reuniones y conserva acuerdos en un solo lugar.</p></div><button class="button primary" data-action="new-meeting"><svg><use href="#i-plus"/></svg> Agendar reunión</button></div><div class="project-selector"><label>Proyecto activo<select id="meetings-project"></select></label></div><div id="meetings-list" class="timeline"></div></section>
+
+        <section id="view-admin" class="view admin-only"><div class="page-heading"><div><span class="eyebrow navy">ADMINISTRACIÓN</span><h1>Usuarios y reportes</h1><p>Gestiona accesos, responsables y exportaciones institucionales.</p></div><button class="button primary" data-action="new-user"><svg><use href="#i-plus"/></svg> Nuevo usuario</button></div><div class="report-grid"><a class="report-card" href="/api/admin/reports/projects.csv"><svg><use href="#i-folder"/></svg><div><strong>Proyectos</strong><small>Portafolio completo</small></div><svg class="download"><use href="#i-download"/></svg></a><a class="report-card" href="/api/admin/reports/entrepreneurs.csv"><svg><use href="#i-users"/></svg><div><strong>Emprendedores</strong><small>Directorio y responsables</small></div><svg class="download"><use href="#i-download"/></svg></a><a class="report-card" href="/api/admin/reports/activity.csv"><svg><use href="#i-chart"/></svg><div><strong>Actividad</strong><small>Bitácora de movimientos</small></div><svg class="download"><use href="#i-download"/></svg></a><a class="report-card" href="/api/admin/reports/tracking.csv"><svg><use href="#i-board"/></svg><div><strong>Seguimiento</strong><small>Tareas y estados</small></div><svg class="download"><use href="#i-download"/></svg></a></div><article class="panel"><div class="panel-head"><div><h2>Usuarios de la plataforma</h2><p>Cuentas, roles y accesos</p></div></div><div class="table-wrap"><table><thead><tr><th>Usuario</th><th>Rol</th><th>Estado</th><th>Último acceso</th><th><span class="sr-only">Acciones</span></th></tr></thead><tbody id="users-table"></tbody></table></div></article></section>
+      </div>
+    </section>
+  </div>
+
+  <dialog id="modal" class="modal"><form method="dialog" class="modal-card"><div class="modal-head"><div><span id="modal-eyebrow" class="eyebrow navy">NUEVO REGISTRO</span><h2 id="modal-title">Nuevo proyecto</h2></div><button class="icon-button" value="cancel" formnovalidate aria-label="Cerrar"><svg><use href="#i-x"/></svg></button></div><div id="modal-content"></div></form></dialog>
+  <script src="/app.js?v=3.1" type="module"></script>
+</body>
+</html>
